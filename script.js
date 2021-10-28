@@ -1,37 +1,46 @@
 function computerPlay() {
   number = Math.floor(Math.random() * 3) + 1;
   if (number == 1) {
-    return "Rock";
+    return "rock";
   } else if (number == 2) {
-    return "Paper"
+    return "paper"
   } else if (number == 3) {
-    return "Scissors"
+    return "scissors"
   }
 }
 
 function playRound(input) {
   computerChoice = computerPlay()
-  if (input == "Rock" && computerChoice == "Rock") {
-    return "Rock and Rock tie."
-  } else if (input == "Rock" && computerChoice == "Paper") {
-    return "You lose! Paper covers Rock."
-  } else if (input == "Rock" && computerChoice == "Scissors") {
-    return "You win! Rocks smashes Scissors."
+  if (input == "rock" && computerChoice == "rock") {
+    return "Rock and rock tie."
+  } else if (input == "rock" && computerChoice == "paper") {
+    return "You lose! Paper covers rock."
+  } else if (input == "rock" && computerChoice == "scissors") {
+    return "You win! Rock smashes scissors."
   }
 
-  if (input == "Paper" && computerChoice == "Rock") {
-    return "You win! Paper covers Rock."
-  } else if (input == "Paper" && computerChoice == "Paper") {
-    return "Paper and Paper tie."
-  } else if (input == "Paper" && computerChoice == "Scissors") {
-    return "You lose! Scissors cut Paper!"
+  if (input == "paper" && computerChoice == "rock") {
+    return "You win! Paper covers rock."
+  } else if (input == "paper" && computerChoice == "paper") {
+    return "Paper and paper tie."
+  } else if (input == "paper" && computerChoice == "scissors") {
+    return "You lose! Scissors cut paper!"
   }
 
-  if (input == "Scissors" && computerChoice == "Rock") {
-    return "You lose! Rock smashes Scissors!"
-  } else if (input == "Scissors" && computerChoice == "Paper") {
-    return "You win! Scissor cut Paper!"
-  } else if (input == "Scissor" && computerChoice == "Scissors") {
-    return "Scissors and Scissors tie."
+  if (input == "scissors" && computerChoice == "rock") {
+    return "You lose! Rock smashes scissors!"
+  } else if (input == "scissors" && computerChoice == "paper") {
+    return "You win! Scissor cut paper!"
+  } else if (input == "scissors" && computerChoice == "scissors") {
+    return "Scissors and scissors tie."
   }
 }
+
+let input = prompt("Rock, paper, or scissors?")
+input = input.toLocaleLowerCase()
+result = playRound(input)
+console.log(result)
+alert(result)
+
+
+
