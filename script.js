@@ -36,11 +36,18 @@ function playRound(input) {
   }
 }
 
-let input = prompt("Rock, paper, or scissors?")
-input = input.toLocaleLowerCase()
-result = playRound(input)
-console.log(result)
-alert(result)
+function game() {
+  for (let i = 0; i < 5; i++) {
+    let input = prompt("Rock, paper, or scissors?")
+    input = input.toLocaleLowerCase()
+    result = playRound(input)
+    alert(result)
+  }
+}
+
+game()
+
+
 
 
 
