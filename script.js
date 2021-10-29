@@ -1,4 +1,4 @@
-function computerPlay() {
+function selectRandom() {
   number = Math.floor(Math.random() * 3) + 1;
   if (number == 1) {
     return "rock";
@@ -10,7 +10,7 @@ function computerPlay() {
 }
 
 function playRound(input) {
-  computerChoice = computerPlay()
+  computerChoice = selectRandom()
   if (input == "rock" && computerChoice == "rock") {
     return "Rock and rock tie."
   } else if (input == "rock" && computerChoice == "paper") {
@@ -42,7 +42,7 @@ function playRound(input) {
   }
 }
 
-function game() {
+function playGame() {
   for (let i = 0; i < 5; i++) {
     let input = prompt("Rock, paper, or scissors?")
     input = input.toLocaleLowerCase()
@@ -54,7 +54,7 @@ function game() {
 let playerWinCounter = 0;
 let computerWinCounter = 0;
 
-game()
+playGame()
 
 
 
