@@ -79,7 +79,3 @@ winCounterDiv.appendChild(playerWinCounterDiv)
 winCounterDiv.appendChild(computerWinCounterDiv)
 winCounterDiv.appendChild(resultsDiv)
 counterDiv.appendChild(winCounterDiv)
-
-
-
-
