@@ -42,21 +42,19 @@ function playRound(input) {
   }
 }
 
-function playGame() {
-  for (let i = 0; i < 5; i++) {
-    let input = prompt("Rock, paper, or scissors?")
-    input = input.toLocaleLowerCase()
-    result = playRound(input)
-    alert(result + " " + `Player wins: ${playerWinCounter}, Computer wins: ${computerWinCounter}`)
-  }
+function playGame(input) {
+  result = playRound(input)
+  alert(result + " " + `Player wins: ${playerWinCounter}, Computer wins: ${computerWinCounter}`)
 }
 
 let playerWinCounter = 0;
 let computerWinCounter = 0;
 
-playGame()
+const buttons = document.querySelectorAll('button');
 
-
+buttons.forEach(button => button.addEventListener('click', function (e) {
+  console.log(this.id)
+}));
 
 
 
