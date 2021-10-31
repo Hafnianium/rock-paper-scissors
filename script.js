@@ -50,6 +50,13 @@ function playRound(input) {
 
 function playGame(input) {
   result = playRound(input)
+  if (playerWinCounter == 5) {
+    resultsDiv.textContent = "YOU WIN"
+  } else if (computerWinCounter == 5) {
+    resultsDiv.textContent = "YOU LOSE"
+  } else {
+
+  }
 }
 
 let playerWinCounter = 0;
