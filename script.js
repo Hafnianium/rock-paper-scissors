@@ -53,7 +53,7 @@ let computerWinCounter = 0;
 const buttons = document.querySelectorAll('button');
 
 buttons.forEach(button => button.addEventListener('click', function (e) {
-  console.log(this.id)
+  playGame(this.id)
 }));
 
 
